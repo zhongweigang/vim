@@ -1,0 +1,12 @@
+:SynMark	synmark.txt	/*:SynMark*
+:SynMarkDef	synmark.txt	/*:SynMarkDef*
+:SynMarkEnd	synmark.txt	/*:SynMarkEnd*
+:SynMarkHighlight	synmark.txt	/*:SynMarkHighlight*
+:SynMarkLink	synmark.txt	/*:SynMarkLink*
+:SynMarkStart	synmark.txt	/*:SynMarkStart*
+synmark	synmark.txt	/*synmark*
+synmark-bang	synmark.txt	/*synmark-bang*
+synmark-commands	synmark.txt	/*synmark-commands*
+synmark-introduction	synmark.txt	/*synmark-introduction*
+synmark.txt	synmark.txt	/*synmark.txt*
+synmark.vim	synmark.txt	/*synmark.vim*

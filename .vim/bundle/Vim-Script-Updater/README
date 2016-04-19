@@ -1,0 +1,29 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3135
+
+This Python script updates vim scripts listed in a watch list that you create.
+It converts any script to a vimball, thus allowing for easier uninstallation with :RmVimball.
+You can have multiple watch lists if you want to keep things sorted.
+
+If you don't care about vimballs and prefer a script that is run from within Vim rather than in the terminal, you can use GetLatestVimScripts: vimscript#642
+
+When run, it parses a watch-list file, looks for updates on www.vim.org, asks for a confirmation to download updated scripts, converts them to vimballs and installs them, and commits changes to the watch list.
+
+The script is quite new and still needs some debugging. Please report bugs to me.
+
+If you use a watch list from the former bash implementation, the new Python version will need to redownload all the scripts once to upgrade the watch list format. I have rewritten the script in Python to get rid of the dependencies (xsltproc, curl, etc.) of the bash version.
+
+--------------------------------------------------------------------
+
+usage: ./vim-update-scripts.py watchlist
+
+where watchlist is a file containing one or more lines with the following syntax:
+	script ID
+or
+	script ID|prefix
+
+Example file:
+	42
+	1259|colors
+	3096|plugin
+	3108
+

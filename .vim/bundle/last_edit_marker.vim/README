@@ -1,0 +1,14 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4291
+
+Automatically adds a global mark whenever you leave Insert mode, so you can
+easily return to text you were last working on, even if you have moved to a
+different buffer!  I tend to need this after I have been navigating around
+files to do some research.  This saves us from hitting Ctrl-O repeatedly!
+
+It sets global marker Z so you can jump back with g'Z but this is also bound to
+the C-Y key for convenience.
+
+ISSUES: not all edits require Insert mode.  e.g. undo or 4r0
+And leaving Insert mode is not always an edit (e.g. Insert mode on a
+conqueterm, or i<Esc> aborted edit).
+
