@@ -1,0 +1,6 @@
+rm -f tags cscope*
+echo "ctags"
+ctags -R .
+echo "cscope"
+find `pwd` -name "*.h" -o -name "*.c" -o -name "*.cc" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.hh" > cscope.files
+cscope -bkq -i cscope.files

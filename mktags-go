@@ -1,0 +1,15 @@
+rm -f tags cscope.*
+echo "ctags"
+ctags -R .
+echo "cscope"
+go_pkg_src=$GOROOT/src/pkg
+
+find $go_pkg_src -name "*.go" -print > cscope.files
+find `pwd` -name "*.go" -print >> cscope.files
+
+if cscope -b -k; then
+    echo "Done"
+    else
+    echo "Failed"
+    exit 1
+fi
